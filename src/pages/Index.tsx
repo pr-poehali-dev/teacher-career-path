@@ -370,6 +370,320 @@ const Index = () => {
 
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
+            <Icon name="Medal" className="text-yellow-600" size={32} />
+            <h2 className="text-3xl font-bold">Награды и звания для учителей</h2>
+          </div>
+
+          <div className="grid gap-6">
+            <Card className="border-2 border-yellow-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-yellow-50 to-amber-50">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center">
+                    <Icon name="Crown" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">Государственные награды РФ</CardTitle>
+                    <CardDescription>Высшие награды за выдающийся вклад в образование</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-white rounded-lg border border-yellow-300">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Star" className="text-yellow-600 flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Орден "За заслуги перед Отечеством"</h4>
+                        <p className="text-xs text-muted-foreground mb-2">Высшая награда за многолетнюю плодотворную деятельность</p>
+                        <Badge variant="outline" className="text-xs">Награждено: ~50 учителей с 1994 года</Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg border border-yellow-300">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Star" className="text-yellow-600 flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Орден Почёта</h4>
+                        <p className="text-xs text-muted-foreground mb-2">За большой вклад в развитие образования и воспитание подрастающего поколения</p>
+                        <Badge variant="outline" className="text-xs">Награждаются ежегодно ~100-150 педагогов</Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg border border-yellow-300">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Star" className="text-yellow-600 flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Орден Дружбы</h4>
+                        <p className="text-xs text-muted-foreground mb-2">За укрепление дружбы между народами через образование</p>
+                        <Badge variant="outline" className="text-xs">~30-50 педагогов ежегодно</Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg border border-yellow-300">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Star" className="text-yellow-600 flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Медаль К.Д. Ушинского</h4>
+                        <p className="text-xs text-muted-foreground mb-2">Специальная награда для работников образования</p>
+                        <Badge variant="outline" className="text-xs">~200-300 педагогов ежегодно</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-purple-200 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
+                    <Icon name="Award" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">Почётные звания</CardTitle>
+                    <CardDescription>Звания, дающие статус и дополнительные выплаты</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-bold">Заслуженный учитель РФ</h4>
+                      <Badge className="bg-purple-600">Высшее звание</Badge>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Присваивается за высокие достижения в обучении и воспитании, стаж от 15 лет
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-2 text-xs">
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-purple-600" />
+                        <span>Ежемесячная доплата 1000-5000 ₽ (по регионам)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-purple-600" />
+                        <span>Льготы на ЖКХ и транспорт</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-purple-600" />
+                        <span>Приоритет при получении путёвок</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-purple-600" />
+                        <span>~500-700 педагогов получают ежегодно</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-bold">Почётный работник образования РФ</h4>
+                      <Badge variant="secondary">Ведомственная награда</Badge>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Награда Министерства просвещения за значительные успехи в работе, стаж от 10 лет
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-2 text-xs">
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-blue-600" />
+                        <span>Надбавка 500-2000 ₽ ежемесячно</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-blue-600" />
+                        <span>Приоритет при аттестации</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-blue-600" />
+                        <span>Нагрудный знак и удостоверение</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" size={14} className="text-blue-600" />
+                        <span>~3000-5000 награждений ежегодно</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
+                    <Icon name="Trophy" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">Профессиональные конкурсы и премии</CardTitle>
+                    <CardDescription>Конкурсы с денежными призами и признанием</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg border border-orange-200">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Icon name="Award" className="text-orange-600 flex-shrink-0" size={24} />
+                      <div>
+                        <h4 className="font-bold mb-1">Учитель года России</h4>
+                        <Badge className="bg-orange-500 text-xs mb-2">Самый престижный конкурс</Badge>
+                      </div>
+                    </div>
+                    <ul className="text-sm space-y-1 ml-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-orange-600">•</span>
+                        <span><strong>Призовой фонд:</strong> 200 000 ₽ победителю + региональные премии до 500 000 ₽</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-orange-600">•</span>
+                        <span><strong>Участников:</strong> ~100 финалистов, тысячи на региональных этапах</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-orange-600">•</span>
+                        <span><strong>Бонус:</strong> Всероссийская известность, карьерный рост</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Icon name="Sparkles" className="text-blue-600 flex-shrink-0" size={24} />
+                      <div>
+                        <h4 className="font-bold mb-1">Премия Президента РФ</h4>
+                        <Badge className="bg-blue-500 text-xs mb-2">Для лучших учителей</Badge>
+                      </div>
+                    </div>
+                    <ul className="text-sm space-y-1 ml-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span><strong>Размер премии:</strong> 200 000 ₽</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span><strong>Количество:</strong> 1000 премий ежегодно</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span><strong>Критерии:</strong> Высокие результаты учеников, инновации в обучении</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-gradient-to-br from-green-50 to-teal-50 rounded-lg border border-green-200">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Icon name="Lightbulb" className="text-green-600 flex-shrink-0" size={24} />
+                      <div>
+                        <h4 className="font-bold mb-1">Гранты за инновации</h4>
+                        <Badge className="bg-green-500 text-xs mb-2">Для творческих педагогов</Badge>
+                      </div>
+                    </div>
+                    <ul className="text-sm space-y-1 ml-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600">•</span>
+                        <span><strong>Гранты Президента:</strong> До 1 000 000 ₽ на проекты</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600">•</span>
+                        <span><strong>Конкурс инноваций:</strong> 100 000 - 500 000 ₽</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600">•</span>
+                        <span><strong>Региональные гранты:</strong> 50 000 - 300 000 ₽</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg border border-pink-200">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Icon name="Users" className="text-pink-600 flex-shrink-0" size={24} />
+                      <div>
+                        <h4 className="font-bold mb-1">Региональные конкурсы</h4>
+                        <Badge className="bg-pink-500 text-xs mb-2">Доступны большинству</Badge>
+                      </div>
+                    </div>
+                    <ul className="text-sm space-y-1 ml-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-pink-600">•</span>
+                        <span>"Лучший учитель года" в регионах: 30-100 тыс ₽</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-pink-600">•</span>
+                        <span>"Педагог-новатор": 20-80 тыс ₽</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-pink-600">•</span>
+                        <span>Конкурсы методических разработок: 10-50 тыс ₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Icon name="Info" className="text-blue-600" size={24} />
+                  Как получить награду или звание?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <Icon name="ListChecks" size={18} className="text-blue-600" />
+                      Общие требования
+                    </h4>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <Icon name="ArrowRight" size={16} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <span>Стаж работы от 10-15 лет (для званий)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ArrowRight" size={16} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <span>Высокие результаты учеников (ЕГЭ, олимпиады)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ArrowRight" size={16} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <span>Публикации, методические разработки</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ArrowRight" size={16} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <span>Положительная характеристика от администрации</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-3 flex items-center gap-2">
+                      <Icon name="FileText" size={18} className="text-blue-600" />
+                      Процесс подачи
+                    </h4>
+                    <ol className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="font-bold text-blue-600 flex-shrink-0">1.</span>
+                        <span>Подготовка портфолио достижений</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-bold text-blue-600 flex-shrink-0">2.</span>
+                        <span>Представление от школы и районо</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-bold text-blue-600 flex-shrink-0">3.</span>
+                        <span>Рассмотрение комиссией (региональной или федеральной)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-bold text-blue-600 flex-shrink-0">4.</span>
+                        <span>Присвоение звания/награды (от 3 месяцев до 1 года)</span>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
             <Icon name="TrendingUp" className="text-primary" size={32} />
             <h2 className="text-3xl font-bold">Статус учителя в современном обществе</h2>
           </div>
