@@ -93,14 +93,57 @@ const Index = () => {
     }
   ];
 
+  const careerGrowthOptions = [
+    {
+      title: "Директор школы",
+      duration: "10-15 лет опыта",
+      salary: "80 000 - 150 000 ₽",
+      requirements: ["Высшая квалификационная категория", "Опыт административной работы", "Управленческие компетенции"],
+      challenges: ["Огромная ответственность", "Работа 24/7", "Конфликты с учителями и родителями"],
+      icon: "Crown"
+    },
+    {
+      title: "Завуч (заместитель директора)",
+      duration: "7-10 лет опыта",
+      salary: "60 000 - 100 000 ₽",
+      requirements: ["Первая/высшая категория", "Опыт методической работы", "Знание ФГОС и документооборота"],
+      challenges: ["Больше бумажной работы", "Меньше преподавания", "Конфликты между администрацией и учителями"],
+      icon: "Briefcase"
+    },
+    {
+      title: "Методист в управлении образования",
+      duration: "5-8 лет опыта",
+      salary: "50 000 - 90 000 ₽",
+      requirements: ["Высшая категория", "Публикации", "Опыт методической работы"],
+      challenges: ["Много командировок по школам", "Бюрократия", "Отрыв от реального преподавания"],
+      icon: "FileText"
+    },
+    {
+      title: "Руководитель ШМО (школьного методического объединения)",
+      duration: "3-5 лет опыта",
+      salary: "+5 000 - 15 000 ₽ к зарплате",
+      requirements: ["Первая категория", "Авторитет среди коллег", "Организаторские способности"],
+      challenges: ["Дополнительная нагрузка без освобождения от уроков", "Организация мероприятий", "Отчёты"],
+      icon: "Users"
+    },
+    {
+      title: "Автор учебных материалов",
+      duration: "От 5 лет опыта",
+      salary: "Проектная оплата: 20 000 - 500 000 ₽ за работу",
+      requirements: ["Экспертиза в предмете", "Методическая грамотность", "Портфолио разработок"],
+      challenges: ["Нестабильный доход", "Высокая конкуренция", "Долгие сроки согласования"],
+      icon: "BookOpen"
+    }
+  ];
+
   const perspectives = [
     {
-      title: "Карьерный рост",
+      title: "Карьерные треки",
       points: [
-        "Завуч / Директор школы (через 10+ лет)",
-        "Методист в управлении образования",
-        "Репетитор (дополнительный доход 20-100 тыс/мес)",
-        "Автор учебных материалов"
+        "Административный трек: учитель → руководитель ШМО → завуч → директор",
+        "Методический трек: учитель → методист школы → методист управления образования",
+        "Экспертный трек: учитель высшей категории → автор методик → эксперт ЕГЭ",
+        "Предпринимательский трек: учитель → репетитор → руководитель образовательного центра"
       ],
       icon: "TrendingUp",
       color: "text-primary"
@@ -304,6 +347,163 @@ const Index = () => {
                   <li>• После колледжа можно поступить в вуз по сокращённой программе (3 года вместо 4)</li>
                   <li>• Целевое обучение: школа или районо оплачивают учёбу, взамен — работа в школе 3-5 лет</li>
                 </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <Icon name="TrendingUp" className="text-primary" size={32} />
+            <h2 className="text-3xl font-bold">Карьерный рост учителя</h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
+            {careerGrowthOptions.map((career, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/50">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Icon name={career.icon} className="text-primary" size={20} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-base">{career.title}</CardTitle>
+                      <Badge variant="outline" className="text-xs mt-1">{career.duration}</Badge>
+                    </div>
+                  </div>
+                  <CardDescription className="text-base font-semibold text-primary">
+                    {career.salary}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div>
+                    <h4 className="font-semibold text-xs mb-2 flex items-center gap-1 text-green-700">
+                      <Icon name="CheckCircle2" size={14} />
+                      Требования
+                    </h4>
+                    <ul className="text-xs space-y-1">
+                      {career.requirements.map((req, i) => (
+                        <li key={i} className="text-muted-foreground pl-3">• {req}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xs mb-2 flex items-center gap-1 text-red-700">
+                      <Icon name="AlertCircle" size={14} />
+                      Трудности
+                    </h4>
+                    <ul className="text-xs space-y-1">
+                      {career.challenges.map((challenge, i) => (
+                        <li key={i} className="text-muted-foreground pl-3">• {challenge}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+            <CardHeader>
+              <CardTitle className="text-xl flex items-center gap-2">
+                <Icon name="Route" className="text-primary" size={28} />
+                Основные карьерные треки
+              </CardTitle>
+              <CardDescription>Выберите свой путь развития в образовании</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="p-4 bg-white rounded-lg border-l-4 border-blue-500">
+                    <h3 className="font-bold mb-2 flex items-center gap-2">
+                      <Icon name="Building2" size={18} className="text-blue-600" />
+                      Административный трек
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-2">Путь к управлению образовательным учреждением</p>
+                    <div className="text-xs space-y-1">
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-blue-600" />
+                        <span>Учитель → Руководитель ШМО (3-5 лет)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-blue-600" />
+                        <span>Руководитель ШМО → Завуч (7-10 лет)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-blue-600" />
+                        <span>Завуч → Директор (10-15 лет)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border-l-4 border-green-500">
+                    <h3 className="font-bold mb-2 flex items-center gap-2">
+                      <Icon name="BookOpen" size={18} className="text-green-600" />
+                      Методический трек
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-2">Развитие через методическую работу</p>
+                    <div className="text-xs space-y-1">
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-green-600" />
+                        <span>Учитель → Методист школы (3-5 лет)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-green-600" />
+                        <span>Методист школы → Методист районо (5-8 лет)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-green-600" />
+                        <span>Методист районо → Региональный эксперт</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="p-4 bg-white rounded-lg border-l-4 border-purple-500">
+                    <h3 className="font-bold mb-2 flex items-center gap-2">
+                      <Icon name="Award" size={18} className="text-purple-600" />
+                      Экспертный трек
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-2">Признание как эксперта в предмете</p>
+                    <div className="text-xs space-y-1">
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-purple-600" />
+                        <span>Учитель высшей категории (5+ лет)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-purple-600" />
+                        <span>Автор методик и учебных материалов</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-purple-600" />
+                        <span>Эксперт ЕГЭ / ОГЭ / олимпиад</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border-l-4 border-orange-500">
+                    <h3 className="font-bold mb-2 flex items-center gap-2">
+                      <Icon name="Rocket" size={18} className="text-orange-600" />
+                      Предпринимательский трек
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-2">Собственный образовательный бизнес</p>
+                    <div className="text-xs space-y-1">
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-orange-600" />
+                        <span>Учитель → Репетитор (параллельно)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-orange-600" />
+                        <span>Репетитор → Мини-группы на дому</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="ArrowRight" size={12} className="text-orange-600" />
+                        <span>Мини-группы → Образовательный центр</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
