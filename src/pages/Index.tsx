@@ -104,6 +104,163 @@ const Index = () => {
         </header>
 
         <section className="mb-20">
+          <Card className="border-none bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+            <CardHeader className="text-center pb-4">
+              <Icon name="AlertTriangle" className="mx-auto mb-4 text-red-600" size={48} />
+              <CardTitle className="text-3xl mb-3">Почему профессия учителя критически важна</CardTitle>
+              <CardDescription className="text-base">
+                Учитель — это не просто профессия. Это фундамент всего общества
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="max-w-4xl mx-auto">
+              <div className="grid gap-6 md:grid-cols-2 mb-8">
+                <div className="p-5 bg-white/70 rounded-lg border-l-4 border-primary">
+                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                    <Icon name="Brain" size={24} className="text-primary" />
+                    Формирует будущее
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Каждый врач, инженер, программист, политик прошёл через руки учителя. Учитель закладывает 
+                    фундамент знаний и критического мышления, без которого невозможно развитие общества.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-white/70 rounded-lg border-l-4 border-green-600">
+                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                    <Icon name="Heart" size={24} className="text-green-600" />
+                    Воспитывает ценности
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Учитель учит не только математике и русскому. Он формирует моральные ориентиры, учит сопереживанию, 
+                    ответственности, честности — тому, что делает нас людьми.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-white/70 rounded-lg border-l-4 border-purple-600">
+                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                    <Icon name="Users" size={24} className="text-purple-600" />
+                    Социальный лифт
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Для многих детей из бедных семей школа — единственный шанс вырваться из нищеты. 
+                    Учитель открывает двери в мир знаний и возможностей, независимо от достатка родителей.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-white/70 rounded-lg border-l-4 border-secondary">
+                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                    <Icon name="Shield" size={24} className="text-secondary" />
+                    Защита от манипуляций
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Образованное общество сложнее обмануть и манипулировать. Учитель учит думать своей головой, 
+                    проверять факты, не верить слепо любой информации.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 bg-red-100 border-2 border-red-300 rounded-lg">
+                <h3 className="font-bold text-xl mb-4 text-red-900 flex items-center gap-2">
+                  <Icon name="Flame" size={28} className="text-red-700" />
+                  Что будет, если профессия исчезнет?
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-start">
+                    <Icon name="X" size={20} className="text-red-700 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Деградация образования</h4>
+                      <p className="text-sm text-red-800">
+                        Онлайн-курсы не заменят живого учителя. Дети потеряют мотивацию, перестанут понимать материал. 
+                        Качество знаний упадёт в разы.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <Icon name="X" size={20} className="text-red-700 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Разрыв между богатыми и бедными</h4>
+                      <p className="text-sm text-red-800">
+                        Богатые наймут частных репетиторов. Бедные останутся без образования. Социальное неравенство 
+                        станет непреодолимым.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <Icon name="X" size={20} className="text-red-700 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Потеря национальной идентичности</h4>
+                      <p className="text-sm text-red-800">
+                        Учитель передаёт культуру, историю, язык. Без учителей молодое поколение потеряет связь 
+                        с корнями, страна распадётся изнутри.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <Icon name="X" size={20} className="text-red-700 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Экономический крах</h4>
+                      <p className="text-sm text-red-800">
+                        Через 20 лет не будет квалифицированных кадров: врачей, инженеров, учёных. 
+                        Экономика рухнет, страна станет зависимой от других.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <Icon name="X" size={20} className="text-red-700 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Рост преступности и хаоса</h4>
+                      <p className="text-sm text-red-800">
+                        Необразованная молодёжь без моральных ориентиров — питательная среда для преступности, 
+                        экстремизма и социальных конфликтов.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-6 bg-green-100 border-2 border-green-300 rounded-lg">
+                <h3 className="font-bold text-xl mb-3 text-green-900 flex items-center gap-2">
+                  <Icon name="Lightbulb" size={28} className="text-green-700" />
+                  Что нужно сделать прямо сейчас
+                </h3>
+                <ul className="space-y-2">
+                  <li className="flex gap-2 items-start">
+                    <Icon name="CheckCircle2" size={18} className="text-green-700 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">
+                      <strong>Повысить зарплаты</strong> до достойного уровня (минимум 80-100 тыс ₽)
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Icon name="CheckCircle2" size={18} className="text-green-700 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">
+                      <strong>Снизить бюрократию</strong> — убрать 80% бумажной работы, дать учить детей
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Icon name="CheckCircle2" size={18} className="text-green-700 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">
+                      <strong>Вернуть уважение</strong> к профессии через госпропаганду, СМИ, соцсети
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Icon name="CheckCircle2" size={18} className="text-green-700 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">
+                      <strong>Защитить от родителей</strong> — ввести ответственность за оскорбления и угрозы
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <Icon name="CheckCircle2" size={18} className="text-green-700 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-green-800">
+                      <strong>Современные инструменты</strong> — нормальное оборудование, технологии, поддержка
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Icon name="GraduationCap" className="text-primary" size={32} />
             <h2 className="text-3xl font-bold">Карьерная лестница</h2>
