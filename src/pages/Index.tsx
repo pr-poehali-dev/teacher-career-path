@@ -368,6 +368,180 @@ const Index = () => {
           </Card>
         </section>
 
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <Icon name="TrendingUp" className="text-primary" size={32} />
+            <h2 className="text-3xl font-bold">Статус учителя в современном обществе</h2>
+          </div>
+
+          <div className="grid gap-6 mb-8">
+            <Card className="border-2 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  <Icon name="BarChart3" className="text-primary" size={32} />
+                  Парадокс профессии учителя
+                </CardTitle>
+                <CardDescription className="text-base mt-2">
+                  Высокая социальная значимость при низком материальном статусе
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-5 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <h3 className="font-bold text-lg mb-3 text-green-900">Что говорят опросы</h3>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <Icon name="CheckCircle2" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>73% россиян считают профессию учителя важной для общества</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="CheckCircle2" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>Учителя входят в топ-5 самых уважаемых профессий по опросам ВЦИОМ</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="CheckCircle2" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>89% родителей доверяют педагогам воспитание своих детей</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="p-5 bg-red-50 rounded-lg border-l-4 border-red-600">
+                    <h3 className="font-bold text-lg mb-3 text-red-900">Но реальность другая</h3>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                        <span>Только 12% выпускников хотят стать учителями</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                        <span>Зарплата учителя ниже средней по экономике в 1.5-2 раза</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                        <span>45% учителей испытывают дефицит уважения со стороны родителей</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  <Icon name="Rocket" className="text-secondary" size={32} />
+                  Педагог как двигатель прогресса
+                </CardTitle>
+                <CardDescription className="text-base mt-2">
+                  Без учителей невозможно развитие науки, технологий и общества
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                      <Icon name="Award" className="text-primary" size={24} />
+                      Исторические примеры влияния учителей
+                    </h3>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <div className="font-semibold mb-2">🧪 Дмитрий Менделеев</div>
+                        <p className="text-sm text-muted-foreground">
+                          Преподавал химию в университете. Его ученики создали российскую химическую школу
+                        </p>
+                      </div>
+                      <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
+                        <div className="font-semibold mb-2">🚀 Константин Циолковский</div>
+                        <p className="text-sm text-muted-foreground">
+                          Учитель физики в Калуге. Вдохновил поколение космических инженеров
+                        </p>
+                      </div>
+                      <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                        <div className="font-semibold mb-2">📚 Антон Макаренко</div>
+                        <p className="text-sm text-muted-foreground">
+                          Создал систему воспитания, которую изучают во всём мире до сих пор
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-6 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg border-2 border-orange-200">
+                    <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                      <Icon name="Globe" className="text-secondary" size={24} />
+                      Влияние на современную экономику
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2">📊 Экономический эффект</h4>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Каждый 1 рубль, вложенный в качественное образование, приносит экономике 3-5 рублей возврата через 15-20 лет
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2">🏭 Кадры для индустрии</h4>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          100% инженеров, врачей, программистов — продукт работы школьных учителей математики, физики, химии
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2">💡 Инновации и стартапы</h4>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Качественное школьное образование формирует критическое мышление — основу для инноваций
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2">🌍 Конкурентоспособность страны</h4>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Страны с сильной системой образования (Финляндия, Сингапур, Южная Корея) лидируют в экономике
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-6 bg-primary/5 rounded-lg border-2 border-primary/20">
+                    <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <Icon name="Sparkles" className="text-primary" size={24} />
+                      Учитель — профессия будущего
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Несмотря на развитие ИИ и онлайн-образования, роль учителя только усиливается:
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      <div className="flex gap-2 items-start">
+                        <Icon name="ArrowRight" size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <strong className="text-sm">Наставник в информационном хаосе</strong>
+                          <p className="text-xs text-muted-foreground mt-1">Учит фильтровать информацию, отличать правду от фейков</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <Icon name="ArrowRight" size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <strong className="text-sm">Развитие эмоционального интеллекта</strong>
+                          <p className="text-xs text-muted-foreground mt-1">То, чему не может научить компьютер</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <Icon name="ArrowRight" size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <strong className="text-sm">Формирование soft skills</strong>
+                          <p className="text-xs text-muted-foreground mt-1">Коммуникация, работа в команде, критическое мышление</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <Icon name="ArrowRight" size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <strong className="text-sm">Адаптация к изменениям</strong>
+                          <p className="text-xs text-muted-foreground mt-1">Учит учиться — главный навык XXI века</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         <section className="mb-12">
           <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-2">
             <CardHeader className="text-center">
