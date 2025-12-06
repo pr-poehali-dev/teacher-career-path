@@ -340,11 +340,11 @@ const Index = () => {
             <CardContent>
               <div className="grid gap-4 md:grid-cols-3">
                 <div>
-                  <h4 className="font-semibold text-sm mb-2">Москва</h4>
+                  <h4 className="font-semibold text-sm mb-2">Иркутская область</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Зарплата 80-120 тыс ₽</li>
+                    <li>• Зарплата 45-85 тыс ₽</li>
                     <li>• Надбавка молодым 100%</li>
-                    <li>• Социальная карта учителя</li>
+                    <li>• программа Земский  Учитель</li>
                   </ul>
                 </div>
                 <div>
