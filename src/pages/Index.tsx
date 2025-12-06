@@ -49,9 +49,48 @@ const Index = () => {
   ];
 
   const educationPath = [
-    { step: "Бакалавриат", duration: "4 года", cost: "Бесплатно (бюджет) или 150-300 тыс/год" },
-    { step: "Магистратура", duration: "2 года", cost: "Бесплатно (бюджет) или 200-400 тыс/год" },
-    { step: "Повышение квалификации", duration: "Раз в 3 года", cost: "От школы или 5-30 тыс" }
+    { step: "Средне-специальное образование", duration: "3-4 года", cost: "Бесплатно (бюджет) или 80-150 тыс/год", description: "Педагогический колледж после 9 или 11 класса" },
+    { step: "Бакалавриат", duration: "4 года", cost: "Бесплатно (бюджет) или 150-300 тыс/год", description: "Высшее педагогическое образование" },
+    { step: "Магистратура", duration: "2 года", cost: "Бесплатно (бюджет) или 200-400 тыс/год", description: "Углублённая подготовка и научная степень" },
+    { step: "Повышение квалификации", duration: "Раз в 3 года", cost: "От школы или 5-30 тыс", description: "Обязательное обучение для педагогов" }
+  ];
+
+  const irkutskUniversities = [
+    {
+      name: "Педагогический институт ИГУ",
+      fullName: "Педагогический институт Иркутского государственного университета",
+      programs: ["Начальное образование", "Филология", "История", "Математика", "Физика", "Биология", "География"],
+      budget: "Есть бюджетные места",
+      website: "pi.isu.ru"
+    },
+    {
+      name: "ИГУ (другие факультеты)",
+      fullName: "Иркутский государственный университет",
+      programs: ["Иностранные языки", "Психология", "Физическая культура", "Социальная педагогика"],
+      budget: "Есть бюджетные места",
+      website: "isu.ru"
+    },
+    {
+      name: "Восточно-Сибирская академия образования",
+      fullName: "Частный вуз с педагогическими программами",
+      programs: ["Дошкольное образование", "Начальное образование", "Психология", "Логопедия"],
+      budget: "Только платное обучение",
+      website: "vsaco.ru"
+    },
+    {
+      name: "Иркутский педагогический колледж №1",
+      fullName: "Среднее профессиональное образование",
+      programs: ["Преподавание в начальных классах", "Дошкольное образование", "Физическая культура"],
+      budget: "Есть бюджетные места",
+      website: "pedagogic.ru"
+    },
+    {
+      name: "Иркутский региональный колледж педагогического образования",
+      fullName: "Среднее профессиональное образование",
+      programs: ["Коррекционная педагогика", "Специальное дошкольное образование", "Социальная педагогика"],
+      budget: "Есть бюджетные места",
+      website: "irkpo.ru"
+    }
   ];
 
   const perspectives = [
@@ -192,22 +231,82 @@ const Index = () => {
             <h2 className="text-3xl font-bold">Путь образования</h2>
           </div>
           
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
             {educationPath.map((edu, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl font-bold text-primary">{index + 1}</span>
                   </div>
-                  <CardTitle className="text-lg">{edu.step}</CardTitle>
-                  <Badge variant="secondary" className="mx-auto">{edu.duration}</Badge>
+                  <CardTitle className="text-base">{edu.step}</CardTitle>
+                  <Badge variant="secondary" className="mx-auto mt-2">{edu.duration}</Badge>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{edu.cost}</p>
+                  <p className="text-xs text-muted-foreground mb-2">{edu.description}</p>
+                  <p className="text-sm font-semibold text-primary">{edu.cost}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <Card className="border-2 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl flex items-center gap-2">
+                <Icon name="School" className="text-primary" size={28} />
+                Где получить педагогическое образование в Иркутской области
+              </CardTitle>
+              <CardDescription>Вузы и колледжи с педагогическими программами</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {irkutskUniversities.map((uni, index) => (
+                  <div key={index} className="p-4 rounded-lg border hover:border-primary/50 transition-colors bg-gradient-to-r from-background to-muted/20">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+                      <div>
+                        <h3 className="font-bold text-lg mb-1">{uni.name}</h3>
+                        <p className="text-sm text-muted-foreground mb-2">{uni.fullName}</p>
+                        <Badge variant={uni.budget.includes('Есть') ? 'default' : 'secondary'} className="text-xs">
+                          {uni.budget}
+                        </Badge>
+                      </div>
+                      <a 
+                        href={`https://${uni.website}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm text-primary hover:underline flex-shrink-0"
+                      >
+                        <Icon name="ExternalLink" size={16} />
+                        {uni.website}
+                      </a>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold mb-2">Направления подготовки:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {uni.programs.map((program, pIndex) => (
+                          <Badge key={pIndex} variant="outline" className="text-xs">
+                            {program}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <h4 className="font-semibold mb-2 flex items-center gap-2">
+                  <Icon name="Info" size={18} className="text-blue-600" />
+                  Полезная информация
+                </h4>
+                <ul className="text-sm space-y-1 text-muted-foreground">
+                  <li>• Для поступления после 11 класса сдают ЕГЭ по русскому языку, обществознанию и профильному предмету</li>
+                  <li>• В педколледжи можно поступить после 9 класса (конкурс аттестатов)</li>
+                  <li>• После колледжа можно поступить в вуз по сокращённой программе (3 года вместо 4)</li>
+                  <li>• Целевое обучение: школа или районо оплачивают учёбу, взамен — работа в школе 3-5 лет</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
         </section>
 
         <section className="mb-20">
